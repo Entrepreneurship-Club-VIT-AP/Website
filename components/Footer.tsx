@@ -14,9 +14,9 @@ export default function Footer() {
         >
             <motion.div
                 className="flex flex-col text-lg justify-center items-center gap-2">
-                <motion.p className="justify-self-center">E-Cell, VIT-AP.</motion.p>
+                <motion.p className="justify-self-center">Entrepreneurship Club, VIT-AP.</motion.p>
                 <motion.p className="justify-self-center">© 2025 All rights reserved</motion.p>
-                <motion.p className="justify-self-center">Made with ❤️ by the Technical Team, E-Cell.</motion.p>
+                <motion.p className="justify-self-center">Made with ❤️ by the Technical Team</motion.p>
             </motion.div>
             <motion.div className="flex flex-col justify-center text-lg items-center gap-2">
                 <motion.p className="justify-self-center">Follow us on:</motion.p>

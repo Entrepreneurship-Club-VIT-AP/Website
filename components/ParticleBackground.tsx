@@ -48,7 +48,7 @@ const ParticleBackground = () => {
           },
           links: {
             color: "#ff8c00",
-            distance: 150,
+            distance: 180,
             enable: true,
             opacity: 0.5,
             width: 2

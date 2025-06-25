@@ -27,10 +27,10 @@ export default function Header() {
                 />
                 <motion.div
                     className="flex flex-col justify-center items-center">
-                    <p className="underline underline-offset-7 text-xl">
-                        E-Cell
+                    <p className="underline underline-offset-7 not-none:hidden none:text-sm xs:text-xl">
+                        Entrepreneurship Club
                     </p>
-                    <p className="text-xl">
+                    <p className="text-xl not-xs:hidden">
                         VIT-AP
                     </p>
                 </motion.div>

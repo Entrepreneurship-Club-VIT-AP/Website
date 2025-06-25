@@ -2,6 +2,8 @@
 
 @theme inline {
   --font-league: var(--font-league-spartan), sans-serif;
+  --breakpoint-xs: 400px;
+  --breakpoint-none: 300px;
 }
 
 body {
