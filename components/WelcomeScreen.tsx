@@ -7,7 +7,7 @@ export default function WelcomeScreen({children}: {children: React.ReactNode}) {
     React.useEffect(() => {
         const timer = setTimeout(() => {
             setIsVisible(false);
-        }, 4000);
+        }, 3000);
         return () => clearTimeout(timer);
     }, []);
 
@@ -18,7 +18,7 @@ export default function WelcomeScreen({children}: {children: React.ReactNode}) {
                 className='fixed flex z-100 flex-col h-screen w-screen bg-black items-center justify-center'
                 initial={{ opacity: 1 }}
                 animate={{ opacity: 0 }}
-                transition={{ duration: 0.3, delay: 3.7, ease: "easeInOut" }}
+                transition={{ duration: 0.3, delay: 2.7, ease: "easeInOut" }}
             >
                 <motion.div
                     className='flex flex-col items-start'>
@@ -26,15 +26,15 @@ export default function WelcomeScreen({children}: {children: React.ReactNode}) {
                         className='text-white text-3xl md:text-4xl lg:text-6xl font-extrabold'
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, repeatDelay: 2, repeatType: "mirror", repeat: 1 }}
-                    >Entrepreneurship Club
+                        transition={{ duration: 1, repeatDelay: 1, repeatType: "mirror", repeat: 1 }}
+                    >ENTREPRENEURSHIP CLUB
                     </motion.h1>
                     <motion.div>
                         <motion.p
                             className='text-orange-500 font-bold text-lg md:text-xl lg:text-2xl mt-4'
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, delay: 0.5, repeatDelay: 1.5, repeatType: "mirror", repeat: 1 }}
+                            transition={{ duration: 1, delay: 0.5, repeatDelay: 0.5, repeatType: "mirror", repeat: 1 }}
                         >
                             Empower, Execute, Excel.
                         </motion.p>

@@ -12,7 +12,7 @@ export default function Header() {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="flex flex-row items-center justify-between p-4 bg-black z-100 border-orange-500 rounded-b-xl border-2 border-t-0 h-16 sticky top-0 backdrop-blur-3xl"
+            className="flex flex-row items-center justify-between p-4 backdrop-blur-[5px] z-100 rounded-b-xl border-t-0 h-16 sticky top-0"
         >
             <Link
                 href="/"
@@ -66,7 +66,7 @@ export default function Header() {
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="fixed flex flex-col top-15.5 right-2 gap-2 w-fit p-3 h-fit bg-black border-2 border-t-0 border-orange-500 rounded-b-xl z-100">
+                className="fixed flex flex-col top-15.5 right-2 gap-2 w-fit p-3 h-fit bg-gradient-to-b from-black/40 backdrop-blur-[10px] to-black rounded-b-xl z-100">
                 {
                     [{ name: "Home", href: "/" },
                     { name: "About", href: "/#about" },
