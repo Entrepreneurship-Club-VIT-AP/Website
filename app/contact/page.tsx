@@ -77,13 +77,22 @@ export default function ContactPage() {
             icon: "📧",
             title: "Email Us",
             details: "epc202330@gmail.com",
-            description: "Drop us a line anytime"
+            description: "Drop us a line anytime",
+            link: "mailto:epc202330@gmail.com"
         },
         {
             icon: "📱",
-            title: "Social Media",
+            title: "Instagram",
             details: "@entrepreneurshipclub_vitap",
-            description: "Follow us for updates"
+            description: "Follow us for updates",
+            link: "https://www.instagram.com/entrepreneurshipclub_vitap"
+        },
+        {
+            icon: "💼",
+            title: "LinkedIn",
+            details: "Entrepreneurship Club VIT-AP",
+            description: "Connect with us professionally",
+            link: "https://www.linkedin.com/company/entrepreneurship-club-vit-ap/"
         }
     ];
 
@@ -121,11 +130,14 @@ export default function ContactPage() {
                 className="mb-16"
                 variants={itemVariants}
             >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-3xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
                     {contactMethods.map((method, index) => (
-                        <motion.div
+                        <motion.a
                             key={index}
-                            className="border-white/10 border backdrop-blur-[10px] rounded-xl p-6 text-center"
+                            href={method.link}
+                            target={method.link.startsWith('mailto:') ? '_self' : '_blank'}
+                            rel={method.link.startsWith('mailto:') ? '' : 'noopener noreferrer'}
+                            className="border-white/10 border backdrop-blur-[10px] rounded-xl p-6 text-center block cursor-pointer"
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -139,7 +151,7 @@ export default function ContactPage() {
                             <h3 className="text-xl font-bold text-orange-500 mb-2">{method.title}</h3>
                             <p className="text-gray-300 mb-1">{method.details}</p>
                             <p className="text-sm text-gray-400">{method.description}</p>
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
             </motion.section>

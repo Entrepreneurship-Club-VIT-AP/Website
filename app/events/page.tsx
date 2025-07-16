@@ -208,7 +208,7 @@ export default function EventsPage() {
 
             {/* Interactive Timeline */}
             <motion.section 
-                className="max-w-6xl mx-auto relative"
+                className="max-w-6xl mx-auto relative overflow-hidden p-3"
                 ref={timelineRef}
             >
                 {/* Animated Timeline Line */}

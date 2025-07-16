@@ -44,13 +44,28 @@ export default function Header() {
                     { name: "Events", href: "/events" },
                     { name: "Initiatives", href: "/initiatives" },
                     { name: "Contact", href: "/contact" }].map((item) => (
-                        <Link
-                            href={item.href}
+                        <motion.div
                             key={item.name}
-                            className="text-white text-xl hidden sm:block hover:text-orange-500 transition-colors duration-300"
+                            className="relative hidden sm:block"
+                            whileHover="hover"
+                            initial="initial"
                         >
-                            {item.name}
-                        </Link>
+                            <Link
+                                href={item.href}
+                                onClick={() => setIsOpen(false)}
+                                className="text-white text-xl hover:text-orange-500 transition-colors duration-300 relative z-10"
+                            >
+                                {item.name}
+                            </Link>
+                            <motion.div
+                                className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"
+                                variants={{
+                                    initial: { width: 0 },
+                                    hover: { width: "100%" }
+                                }}
+                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                            />
+                        </motion.div>
                     ))
                 }
                 <Image
@@ -76,13 +91,28 @@ export default function Header() {
                     { name: "Events", href: "/events" },
                     { name: "Initiatives", href: "/initiatives" },
                     { name: "Contact", href: "/contact" }].map((item) => (
-                        <Link
-                            href={item.href}
+                        <motion.div
                             key={item.name}
-                            className="text-white text-xl hover:text-orange-500 transition-colors duration-300"
+                            className="relative"
+                            whileHover="hover"
+                            initial="initial"
                         >
-                            {item.name}
-                        </Link>
+                            <Link
+                                href={item.href}
+                                className="text-white text-xl hover:text-orange-500 transition-colors duration-300 block"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {item.name}
+                            </Link>
+                            <motion.div
+                                className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"
+                                variants={{
+                                    initial: { width: 0 },
+                                    hover: { width: "100%" }
+                                }}
+                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                            />
+                        </motion.div>
                     ))
                 }
             </motion.menu>}

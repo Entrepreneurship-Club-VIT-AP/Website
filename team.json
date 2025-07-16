@@ -1,0 +1,322 @@
+﻿{
+    "teams": [
+        {
+            "department": "Admin Team",
+            "members": [
+                {
+                    "name": "Dr. G. Soma Sekhar",
+                    "role": "Faculty Advisor",
+                    "photo": "/teams/admin-team/dr-g-soma-sekhar.webp",
+                    "linkedin": "https://www.linkedin.com/in/dr-somasekhar-g-47aa33116/"
+                },
+                {
+                    "name": "Aarush Sharma",
+                    "role": "President",
+                    "photo": "/teams/admin-team/aarush-sharma.webp",
+                    "linkedin": "https://www.linkedin.com/in/aarushsharma0/"
+                },
+                {
+                    "name": "Aryaman Latish",
+                    "role": "Vice President",
+                    "photo": "/teams/admin-team/aryaman-latish.webp",
+                    "linkedin": "https://www.linkedin.com/in/aryamanlatish"
+                },
+                {
+                    "name": "V C Premchand Yadav",
+                    "role": "Treasurer",
+                    "photo": "/teams/admin-team/v-c-premchand-yadav.webp",
+                    "linkedin": "https://www.linkedin.com/in/premchand-yadav-a785691a2/"
+                },
+                {
+                    "name": "Ajmal Rafi",
+                    "role": "Secretary",
+                    "photo": "/teams/admin-team/ajmal-rafi.webp",
+                    "linkedin": "https://www.linkedin.com/in/ajmal-rafi-4830092a4"
+                },
+                {
+                    "name": "Aryan Choudhary",
+                    "role": "Head of External Affairs",
+                    "photo": "/teams/admin-team/aryan-choudhary.webp",
+                    "linkedin": "https://www.linkedin.com/in/aryan-choudhary-95a483372"
+                },
+                {
+                    "name": "Harsh Rathore",
+                    "role": "Head of Internal Affairs",
+                    "photo": "/teams/admin-team/harsh-rathore.webp",
+                    "linkedin": "https://www.linkedin.com/in/harsh-rathore-811630306"
+                }
+            ]
+        },
+        {
+            "department": "Technical Team",
+            "members": [
+                {
+                    "name": "Tanvish Reddy Sanikommu",
+                    "role": "Lead",
+                    "photo": "/teams/technical-team/tanvish-reddy-sanikommu.webp",
+                    "linkedin": "https://linkedin.com/in/tanvish-reddy"
+                },
+                {
+                    "name": "Pranjal Kumar",
+                    "role": "Associate",
+                    "photo": "/teams/technical-team/pranjal-kumar.webp",
+                    "linkedin": "https://www.linkedin.com/in/pranjal-kumar-780942308/"
+                },
+                {
+                    "name": "Pratyush Mavuri",
+                    "role": "Associate",
+                    "photo": "/teams/technical-team/pratyush-mavuri.webp",
+                    "linkedin": "https://www.linkedin.com/in/pratyush-mavuri"
+                },
+                {
+                    "name": "CK Sugapriyan",
+                    "role": "Associate",
+                    "photo": "/teams/technical-team/ck-sugapriyan.webp",
+                    "linkedin": "https://www.linkedin.com/in/ck-sugapriyan/"
+                },
+                {
+                    "name": "Mallidi Yaswanth Reddy",
+                    "role": "Associate",
+                    "photo": "/teams/technical-team/yaswanth.webp",
+                    "linkedin": "https://www.linkedin.com/in/synaptic-gg-56392a356"
+                }
+            ]
+        },
+        {
+            "department": "Design Team",
+            "members": [
+                {
+                    "name": "Ismit Tripathy",
+                    "role": "Associate",
+                    "photo": "/teams/design-team/ismit-tripathy.webp"
+                },
+                {
+                    "name": "Arya Pratap",
+                    "role": "Associate",
+                    "photo": "/teams/design-team/arya-pratap.webp"
+                },
+                {
+                    "name": "Shreyas Sharma",
+                    "role": "Associate",
+                    "photo": "/teams/design-team/shreyas-sharma.webp"
+                },
+                {
+                    "name": "G Adhitya",
+                    "role": "Associate",
+                    "photo": "/teams/design-team/g-adhitya.webp"
+                }
+            ]
+        },
+        {
+            "department": "Documentation Team",
+            "members": [
+                {
+                    "name": "Jinal Shah",
+                    "role": "Lead",
+                    "photo": "/teams/documentation-team/jinal-shah.webp",
+                    "linkedin": "https://www.linkedin.com/in/jinal-shah-aa281b285"
+                },
+                {
+                    "name": "Soumyadeep Sen",
+                    "role": "Associate",
+                    "photo": "/teams/documentation-team/soumyadeep-sen.webp",
+                    "linkedin": "https://www.linkedin.com/in/soumyadeep-sen-"
+                },
+                {
+                    "name": "Nipun Jaiswal",
+                    "role": "Associate",
+                    "photo": "/teams/documentation-team/nipun-jaiswal.jpeg",
+                    "linkedin": "https://www.linkedin.com/in/nipun-jaiswal-a89357322"
+                },
+                {
+                    "name": "VARSHA.B",
+                    "role": "Associate",
+                    "photo": "/teams/documentation-team/varsha-b.webp"
+                }
+            ]
+        },
+        {
+            "department": "PR \u0026 Outreach Team",
+            "members": [
+                {
+                    "name": "Vishal Kanth K",
+                    "role": "Lead",
+                    "photo": "/teams/pr-outreach-team/vishal-kanth-k.webp"
+                },
+                {
+                    "name": "D.Keerthika",
+                    "role": "Associate",
+                    "photo": "/teams/pr-outreach-team/d-keerthika.webp",
+                    "linkedin": "https://www.linkedin.com/in/keerthika-d-04432b373"
+                },
+                {
+                    "name": "Aishwarya Reddy",
+                    "role": "Associate",
+                    "photo": "/teams/pr-outreach-team/aishwarya-reddy.webp",
+                    "linkedin": "https://www.linkedin.com/in/aishwarya-reddy-kallem-1343212b7"
+                }
+            ]
+        },
+        {
+            "department": "Marketing and Social Media Team",
+            "members": [
+                {
+                    "name": "Jhanavi Joshi",
+                    "role": "Lead",
+                    "photo": "/teams/marketing-social-media-team/jhanavi-joshi.webp",
+                    "linkedin": "https://www.linkedin.com/in/jhanavi-joshi-358b3b1b0"
+                },
+                {
+                    "name": "Abhinav Pandey",
+                    "role": "Co Lead",
+                    "photo": "/teams/marketing-social-media-team/abhinav-pandey.webp",
+                    "linkedin": "https://in.linkedin.com/in/abhinav-pandey-772011373"
+                },
+                {
+                    "name": "Joash Biji",
+                    "role": "Co Lead",
+                    "photo": "/teams/marketing-social-media-team/joash-biji.webp",
+                    "linkedin": "https://www.linkedin.com/in/joashbiji/"
+                },
+                {
+                    "name": "Poonam Sharma",
+                    "role": "Associate",
+                    "photo": "/teams/marketing-social-media-team/poonam-sharma.webp",
+                    "linkedin": "https://www.linkedin.com/in/poonam-sharma-619598320"
+                },
+                {
+                    "name": "Kruthik Devarasetti",
+                    "role": "Associate",
+                    "photo": "/teams/marketing-social-media-team/kruthik-devarasetti.webp",
+                    "linkedin": "https://www.linkedin.com/in/kruthik-devarasetti"
+                },
+                {
+                    "name": "SK.SHAHEED",
+                    "role": "Associate",
+                    "photo": "/teams/marketing-social-media-team/sk-shaheed.webp",
+                    "linkedin": "https://www.linkedin.com/in/sk-shaheed-7077961bb"
+                },
+                {
+                    "name": "Laasya Battula",
+                    "role": "Marketing Team",
+                    "photo": "/teams/marketing-social-media-team/laasya-battula.webp",
+                    "linkedin": "https://www.linkedin.com/in/laasya-sri-battula"
+                },
+                {
+                    "name": "Mohammed Arsh Khan",
+                    "role": "Associate",
+                    "photo": "/teams/marketing-social-media-team/mohammed-arsh-khan.jpeg"
+                },
+                {
+                    "name": "Vishal Thiru",
+                    "role": "Associate",
+                    "photo": "/teams/marketing-social-media-team/vishal-thiru.webp"
+                },
+                {
+                    "name": "Jayasry Majumder",
+                    "role": "Associate",
+                    "photo": "/teams/marketing-social-media-team/jayasry-majumder.webp",
+                    "linkedin": "https://www.linkedin.com/in/jayasry-majumder-68078836a"
+                }
+            ]
+        },
+        {
+            "department": "Event Management Team",
+            "members": [
+                {
+                    "name": "Soumik Paul",
+                    "role": "Lead",
+                    "photo": "/teams/event-management-team/soumik-paul.webp",
+                    "linkedin": "https://www.linkedin.com/in/soumikpaul040/"
+                },
+                {
+                    "name": "Hamdaan Sarfaraz",
+                    "role": "Co Lead",
+                    "photo": "/teams/event-management-team/hamdaan-sarfaraz.webp",
+                    "linkedin": "https://www.linkedin.com/in/hamdaan-sarfaraz-1056a1281"
+                },
+                {
+                    "name": "Rasagna Chitrala",
+                    "role": "Associate",
+                    "photo": "/teams/event-management-team/rasagna-chitrala.webp",
+                    "linkedin": "https://www.linkedin.com/in/rasagna-chitrala-6196a5336"
+                },
+                {
+                    "name": "Anjala Rahman",
+                    "role": "Associate",
+                    "photo": "/teams/event-management-team/anjala-rahman.webp",
+                    "linkedin": "https://www.linkedin.com/in/anjala-rahman-72067a33a"
+                },
+                {
+                    "name": "Pratyush Jha",
+                    "role": "Associate",
+                    "photo": "/teams/event-management-team/pratyush-jha.webp",
+                    "linkedin": "https://www.linkedin.com/in/pratyush-jha-abb93b313"
+                },
+                {
+                    "name": "Aanchal Tripathi",
+                    "role": "Associate",
+                    "photo": "/teams/event-management-team/aanchal-tripathi.webp",
+                    "linkedin": "https://www.linkedin.com/in/aanchal-tripathi-931483373"
+                },
+                {
+                    "name": "Sirivalli Patti",
+                    "role": "Associate",
+                    "photo": "/teams/event-management-team/sirivalli-patti.webp",
+                    "linkedin": "https://www.linkedin.com/in/sirivalli-patti"
+                },
+                {
+                    "name": "Annu Riya Blossoms",
+                    "role": "Associate",
+                    "photo": "/teams/event-management-team/annu-riya-blossoms.webp",
+                    "linkedin": "https://www.linkedin.com/in/riya-blossoms-63b948373"
+                },
+                {
+                    "name": "Sangeetha Julia Badipati",
+                    "role": "Associate",
+                    "photo": "/teams/event-management-team/sangeetha-julia-badipati.webp",
+                    "linkedin": "https://www.linkedin.com/in/sangeetha-julia-badipati-661394328"
+                },
+                {
+                    "name": "Diya Beniwal",
+                    "role": "Associate",
+                    "photo": "/teams/event-management-team/diya-beniwal.webp",
+                    "linkedin": "https://www.linkedin.com/in/diya-beniwal-29a0a930b/"
+                },
+                {
+                    "name": "Devash Gupta",
+                    "role": "Associate",
+                    "photo": "/teams/event-management-team/devash-gupta.webp",
+                    "linkedin": "https://www.linkedin.com/in/devash-gupta-251711311"
+                },
+                {
+                    "name": "Sunkara Charvi Sri",
+                    "role": "Associate",
+                    "photo": "/teams/event-management-team/sunkara-charvi-sri.webp",
+                    "linkedin": "https://www.linkedin.com/in/charvi-sri-sunkara"
+                }
+            ]
+        },
+        {
+            "department": "Research Team",
+            "members": [
+                {
+                    "name": "Vennela",
+                    "role": "Associate",
+                    "photo": "/teams/research-team/vennela.webp"
+                },
+                {
+                    "name": "Shoham Moitra",
+                    "role": "Associate",
+                    "photo": "/teams/research-team/shoham-moitra.jpeg"
+                },
+                {
+                    "name": "Borra Dola Madhavi Krishna",
+                    "role": "Associate",
+                    "photo": "/teams/research-team/madhavi-krishna.webp",
+                    "linkedin": "https://www.linkedin.com/in/madhavi-krishna-924484349"
+                }
+            ]
+        }
+    ]
+}
