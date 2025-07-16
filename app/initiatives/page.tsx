@@ -145,7 +145,7 @@ export default function InitiativesPage() {
                         className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed relative z-10"
                         variants={itemVariants}
                     >
-                        We're crafting something extraordinary! Our initiatives page will showcase all the amazing projects, 
+                        We&apos;re crafting something extraordinary! Our initiatives page will showcase all the amazing projects, 
                         programs, and impact-driven activities that make our entrepreneurship community thrive.
                     </motion.p>
 

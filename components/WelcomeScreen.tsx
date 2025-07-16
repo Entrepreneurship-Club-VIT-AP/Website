@@ -23,7 +23,7 @@ export default function WelcomeScreen({children}: {children: React.ReactNode}) {
                 <motion.div
                     className='flex flex-col items-start'>
                     <motion.h1
-                        className='text-white text-3xl md:text-4xl lg:text-6xl font-extrabold'
+                        className='text-white text-2xl md:text-4xl lg:text-6xl font-extrabold'
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, repeatDelay: 1, repeatType: "mirror", repeat: 1 }}

@@ -96,7 +96,7 @@ export default function TeamPage() {
                     className="text-lg md:text-xl max-w-4xl mx-auto text-orange-300/90 leading-relaxed"
                     variants={itemVariants}
                 >
-                    We're not just one team — we're an ecosystem of passionate individuals working together to build something extraordinary.
+                    We&apos;re not just one team &mdash; we&apos;re an ecosystem of passionate individuals working together to build something extraordinary.
                 </motion.p>
             </motion.section>
 

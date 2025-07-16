@@ -90,7 +90,7 @@ export default function Teams() {
                     className="text-lg md:text-xl text-center max-w-2xl text-orange-300/90"
                     variants={itemVariants}
                 >
-                    We're not just one team — we're an ecosystem
+                    We&apos;re not just one team &mdash; we&apos;re an ecosystem
                 </motion.p>
 
                 <motion.div 
