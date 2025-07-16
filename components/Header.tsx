@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion} from "framer-motion";
 import Image from "next/image";
 
 export default function Header() {
@@ -40,7 +40,9 @@ export default function Header() {
                 {
                     [{ name: "Home", href: "/" },
                     { name: "About", href: "/#about" },
+                    { name: "Teams", href: "/team" },
                     { name: "Events", href: "/events" },
+                    { name: "Initiatives", href: "/initiatives" },
                     { name: "Contact", href: "/contact" }].map((item) => (
                         <Link
                             href={item.href}
@@ -70,7 +72,9 @@ export default function Header() {
                 {
                     [{ name: "Home", href: "/" },
                     { name: "About", href: "/#about" },
+                    { name: "Teams", href: "/team" },
                     { name: "Events", href: "/events" },
+                    { name: "Initiatives", href: "/initiatives" },
                     { name: "Contact", href: "/contact" }].map((item) => (
                         <Link
                             href={item.href}
