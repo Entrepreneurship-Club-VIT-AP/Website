@@ -2,18 +2,7 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import teamsData from "../../team.json";
-
-interface TeamMember {
-    name: string;
-    role: string;
-    photo: string;
-    linkedin?: string;
-}
-
-interface Team {
-    department: string;
-    members: TeamMember[];
-}
+import Image from "next/image";
 
 export default function TeamPage() {
     const [activeTab, setActiveTab] = useState(0);
@@ -161,7 +150,7 @@ export default function TeamPage() {
                                                 whileHover={{ scale: 1.05 }}
                                                 transition={{ duration: 0.3 }}
                                             >
-                                                <img
+                                                <Image
                                                     src={member.photo}
                                                     alt={member.name}
                                                     className="w-full h-full object-cover object-top"
