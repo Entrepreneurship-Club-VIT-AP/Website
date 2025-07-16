@@ -83,7 +83,7 @@ export default function Header() {
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="fixed flex flex-col top-15.5 right-2 gap-2 w-fit p-3 h-fit bg-gradient-to-b from-black/40 backdrop-blur-[10px] to-black rounded-b-xl z-100">
+                className="fixed flex flex-col top-15.5 right-2 gap-2 w-fit p-3 h-fit bg-black rounded-b-xl z-100">
                 {
                     [{ name: "Home", href: "/" },
                     { name: "About", href: "/#about" },

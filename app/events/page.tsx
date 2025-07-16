@@ -4,7 +4,6 @@ import React, { useState, useRef } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 export default function EventsPage() {
-    const [selectedEvent, setSelectedEvent] = useState<number | null>(null);
     const [hoveredEvent, setHoveredEvent] = useState<number | null>(null);
     const timelineRef = useRef<HTMLDivElement>(null);
     
@@ -161,18 +160,18 @@ export default function EventsPage() {
     return (
         <div className="w-full">
             <motion.div
-                className="py-10 px-4"
+                className="py-6 md:py-10 px-4"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
             >
             {/* Hero Section */}
             <motion.section
-                className="text-center mb-16"
+                className="text-center mb-12 md:mb-16"
                 variants={itemVariants}
             >
                 <motion.h1
-                    className="text-4xl md:text-6xl font-bold text-orange-500 mb-6"
+                    className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-orange-500 mb-4 md:mb-6"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
@@ -184,7 +183,7 @@ export default function EventsPage() {
                     📅 Past Events 
                 </motion.h1>
                 <motion.p
-                    className="text-lg md:text-xl max-w-4xl mx-auto text-gray-300 leading-relaxed"
+                    className="text-sm sm:text-base md:text-lg lg:text-xl max-w-4xl mx-auto text-gray-300 leading-relaxed px-4"
                     variants={itemVariants}
                 >
                     We don&apos;t just host events &mdash; we build experiences that shape ideas, fuel ambition, and spark innovation. 
@@ -193,13 +192,13 @@ export default function EventsPage() {
 
                 {/* Interactive Progress Indicator */}
                 <motion.div 
-                    className="mt-8 flex justify-center"
+                    className="mt-6 md:mt-8 flex justify-center px-4"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1 }}
                 >
-                    <div className="bg-black/50 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
-                        <span className="text-orange-400 text-sm font-medium">
+                    <div className="bg-black/50 backdrop-blur-sm rounded-full px-3 py-1.5 md:px-4 md:py-2 border border-white/20">
+                        <span className="text-orange-400 text-xs md:text-sm font-medium">
                             {events.length} Epic Events • Scroll to Explore
                         </span>
                     </div>
@@ -208,11 +207,11 @@ export default function EventsPage() {
 
             {/* Interactive Timeline */}
             <motion.section 
-                className="max-w-6xl mx-auto relative overflow-hidden p-3"
+                className="max-w-6xl mx-auto relative overflow-hidden px-4"
                 ref={timelineRef}
             >
                 {/* Animated Timeline Line */}
-                <div className="absolute left-8 md:left-1/2 transform md:-translate-x-px h-full w-1 bg-gray-700/50 rounded-full">
+                <div className="absolute left-[24px] md:left-1/2 md:-translate-x-0.5 h-full w-0.5 md:w-1 bg-gray-700/50 rounded-full">
                     <motion.div 
                         className="w-full bg-gradient-to-b from-orange-500 via-orange-400 to-orange-300 rounded-full origin-top"
                         style={{ height: timelineHeight }}
@@ -223,7 +222,7 @@ export default function EventsPage() {
                 {events.map((event, index) => (
                     <motion.div
                         key={index}
-                        className={`relative flex items-start mb-16 ${
+                        className={`relative flex items-start mb-12 md:mb-16 ${
                             index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                         }`}
                         onMouseEnter={() => setHoveredEvent(index)}
@@ -231,20 +230,17 @@ export default function EventsPage() {
                     >
                         {/* Interactive Timeline Dot */}
                         <motion.div 
-                            className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-6 h-6 bg-orange-500 rounded-full border-4 border-black z-10 cursor-pointer"
+                            className="absolute left-[1px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 md:w-6 md:h-6 bg-orange-500 rounded-full border-2 md:border-4 border-black z-10"
                             initial={{ scale: 1 }}
                             animate={{
-                                scale: selectedEvent === index ? 1.3 : hoveredEvent === index ? 1.1 : 1,
-                                backgroundColor: selectedEvent === index ? "#ffaa59" : hoveredEvent === index ? "#ff7f39" : "#fc5603",
+                                scale: hoveredEvent === index ? 1.1 : 1,
+                                backgroundColor: hoveredEvent === index ? "#ff7f39" : "#fc5603",
                                 boxShadow: hoveredEvent === index ? "0 0 15px rgba(252, 86, 3, 0.5)" : "none"
                             }}
-                            onClick={() => setSelectedEvent(selectedEvent === index ? null : index)}
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
                             transition={{ duration: 0.2 }}
                         >
                             <motion.div 
-                                className="absolute inset-0 rounded-full border-2 border-orange-300"
+                                className="absolute inset-0 rounded-full border-1 md:border-2 border-orange-300"
                                 animate={{
                                     scale: hoveredEvent === index ? [1, 1.4, 1] : 1,
                                     opacity: hoveredEvent === index ? [1, 0, 1] : 0
@@ -255,7 +251,7 @@ export default function EventsPage() {
 
                         {/* Event Card */}
                         <motion.div
-                            className={`ml-20 md:ml-0 ${
+                            className={`ml-14 md:ml-0 ${
                                 index % 2 === 0 ? 'md:mr-16 md:ml-0' : 'md:ml-16 md:mr-0'
                             } md:w-5/12`}
                             variants={cardVariants}
@@ -264,23 +260,17 @@ export default function EventsPage() {
                             whileInView="visible"
                             viewport={{ once: false, amount: 0.2 }}
                             whileHover="hover"
-                            whileTap="tap"
-                            onClick={() => setSelectedEvent(selectedEvent === index ? null : index)}
-                            style={{ 
-                                cursor: "pointer"
-                            }}
                         >
                             <motion.div
-                                className={`border-white/10 border backdrop-blur-[10px] rounded-xl p-6 relative overflow-hidden bg-gradient-to-br ${event.color} ${event.borderColor}`}
+                                className={`border-white/10 border backdrop-blur-[10px] rounded-lg md:rounded-xl p-4 md:p-6 relative overflow-hidden bg-gradient-to-br ${event.color} ${event.borderColor}`}
                                 animate={{
-                                    borderColor: hoveredEvent === index ? "rgba(252, 86, 3, 0.4)" : undefined,
-                                    scale: selectedEvent === index ? 1.01 : 1
+                                    borderColor: hoveredEvent === index ? "rgba(252, 86, 3, 0.4)" : undefined
                                 }}
                                 transition={{ duration: 0.2 }}
                             >
                                 {/* Date Badge */}
                                 <motion.div 
-                                    className="inline-block px-3 py-1 bg-orange-500/20 border border-orange-500/50 rounded-full text-sm font-medium text-orange-300 mb-4"
+                                    className="inline-block px-2 py-1 md:px-3 md:py-1 bg-orange-500/20 border border-orange-500/50 rounded-full text-xs md:text-sm font-medium text-orange-300 mb-3 md:mb-4"
                                     whileHover={{ scale: 1.02 }}
                                 >
                                     {event.date}
@@ -288,14 +278,14 @@ export default function EventsPage() {
 
                                 {/* Event Title */}
                                 <motion.h3 
-                                    className="text-2xl font-bold text-orange-500 mb-3 flex items-center gap-3"
+                                    className="text-lg sm:text-xl md:text-2xl font-bold text-orange-500 mb-2 md:mb-3 flex items-center gap-2 md:gap-3"
                                     animate={{
                                         color: hoveredEvent === index ? "#ff7f39" : "#fc5603"
                                     }}
                                     transition={{ duration: 0.2 }}
                                 >
                                     <motion.span 
-                                        className="text-3xl"
+                                        className="text-xl sm:text-2xl md:text-3xl"
                                         animate={{ 
                                             scale: hoveredEvent === index ? 1.05 : 1
                                         }}
@@ -308,56 +298,21 @@ export default function EventsPage() {
 
                                 {/* Description */}
                                 <motion.p 
-                                    className="text-gray-300 mb-4 leading-relaxed"
-                                    animate={{
-                                        opacity: selectedEvent === index ? 1 : 0.9
-                                    }}
+                                    className="text-sm md:text-base text-gray-300 mb-3 md:mb-4 leading-relaxed"
                                 >
                                     {event.description}
                                 </motion.p>
 
-                                {/* Expandable Highlights */}
-                                <AnimatePresence>
-                                    {event.highlights.length > 0 && (selectedEvent === index || hoveredEvent === index) && (
-                                        <motion.div
-                                            className="mb-4 overflow-hidden"
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: "auto", opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            transition={{ duration: 0.3 }}
-                                        >
-                                            <motion.ul 
-                                                className="list-disc list-inside text-gray-400 space-y-2 pl-2"
-                                                initial={{ y: -10 }}
-                                                animate={{ y: 0 }}
-                                                transition={{ duration: 0.2 }}
-                                            >
-                                                {event.highlights.map((highlight, idx) => (
-                                                    <motion.li 
-                                                        key={idx} 
-                                                        className="text-sm"
-                                                        initial={{ opacity: 0 }}
-                                                        animate={{ opacity: 1 }}
-                                                        transition={{ delay: idx * 0.03 }}
-                                                    >
-                                                        {highlight}
-                                                    </motion.li>
-                                                ))}
-                                            </motion.ul>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-
                                 {/* Stats */}
                                 {event.stats && (
                                     <motion.div 
-                                        className="bg-black/30 rounded-lg p-3 border border-white/10 mt-4"
+                                        className="bg-black/30 rounded-md md:rounded-lg p-2 md:p-3 border border-white/10 mt-3 md:mt-4"
                                         whileHover={{ 
                                             borderColor: "rgba(252, 86, 3, 0.2)"
                                         }}
                                         transition={{ duration: 0.2 }}
                                     >
-                                        <p className="text-green-400 font-medium text-sm">
+                                        <p className="text-green-400 font-medium text-xs md:text-sm">
                                             {event.stats}
                                         </p>
                                     </motion.div>
@@ -366,7 +321,7 @@ export default function EventsPage() {
                                 {/* Featured Badge */}
                                 {event.featured && (
                                     <motion.div 
-                                        className="absolute top-3 right-3"
+                                        className="absolute top-2 right-2 md:top-3 md:right-3"
                                         animate={{ 
                                             scale: [1, 1.05, 1]
                                         }}
@@ -375,22 +330,11 @@ export default function EventsPage() {
                                             repeat: Infinity
                                         }}
                                     >
-                                        <span className="px-2 py-1 bg-gradient-to-r from-orange-500 to-yellow-400 text-black text-xs font-bold rounded-full shadow-lg">
+                                        <span className="px-1.5 py-0.5 md:px-2 md:py-1 bg-gradient-to-r from-orange-500 to-yellow-400 text-black text-xs font-bold rounded-full shadow-lg">
                                             ⭐ FEATURED
                                         </span>
                                     </motion.div>
                                 )}
-
-                                {/* Click Indicator */}
-                                <motion.div 
-                                    className="absolute bottom-3 right-3 text-orange-400 text-xs opacity-60"
-                                    animate={{ 
-                                        opacity: hoveredEvent === index ? 0.8 : 0.6
-                                    }}
-                                    transition={{ duration: 0.2 }}
-                                >
-                                    Click to {selectedEvent === index ? 'collapse' : 'expand'}
-                                </motion.div>
                             </motion.div>
                         </motion.div>
                     </motion.div>
@@ -399,11 +343,11 @@ export default function EventsPage() {
 
             {/* Enhanced Call to Action */}
             <motion.section
-                className="text-center mt-20"
+                className="text-center mt-16 md:mt-20 px-4"
                 variants={itemVariants}
             >
                 <motion.div
-                    className="border-white/10 border backdrop-blur-[10px] rounded-xl p-8 max-w-2xl mx-auto relative overflow-hidden"
+                    className="border-white/10 border backdrop-blur-[10px] rounded-lg md:rounded-xl p-6 md:p-8 max-w-2xl mx-auto relative overflow-hidden"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
@@ -413,19 +357,19 @@ export default function EventsPage() {
                     }}
                 >
                     <motion.h3 
-                        className="text-2xl font-bold text-orange-500 mb-4"
+                        className="text-xl md:text-2xl font-bold text-orange-500 mb-3 md:mb-4"
                         whileHover={{ scale: 1.05 }}
                     >
                         Ready for the Next Chapter?
                     </motion.h3>
-                    <p className="text-gray-300 mb-6">
+                    <p className="text-sm md:text-base text-gray-300 mb-4 md:mb-6">
                         These are just the highlights from our incredible journey. 
                         Join us and be part of creating the next set of unforgettable experiences!
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                         <motion.a
                             href="/contact"
-                            className="inline-block px-6 py-3 bg-orange-500 rounded-xl text-white font-semibold relative overflow-hidden"
+                            className="inline-block px-5 py-2.5 md:px-6 md:py-3 bg-orange-500 rounded-lg md:rounded-xl text-white font-semibold relative overflow-hidden text-sm md:text-base"
                             whileHover={{ 
                                 scale: 1.05,
                                 backgroundColor: "#e04503",
@@ -442,7 +386,7 @@ export default function EventsPage() {
                         </motion.a>
                         <motion.a
                             href="/"
-                            className="inline-block px-6 py-3 bg-black border-2 border-orange-500 rounded-xl text-white font-semibold"
+                            className="inline-block px-5 py-2.5 md:px-6 md:py-3 bg-black border-2 border-orange-500 rounded-lg md:rounded-xl text-white font-semibold text-sm md:text-base"
                             whileHover={{ 
                                 scale: 1.05,
                                 backgroundColor: "rgba(252, 86, 3, 0.1)",

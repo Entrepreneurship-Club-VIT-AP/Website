@@ -153,6 +153,8 @@ export default function TeamPage() {
                                                 <Image
                                                     src={member.photo}
                                                     alt={member.name}
+                                                    width={300}
+                                                    height={400}
                                                     className="w-full h-full object-cover object-top"
                                                     onError={(e) => {
                                                         const target = e.target as HTMLImageElement;
