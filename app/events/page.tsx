@@ -1,7 +1,7 @@
 
 "use client";
 import React, { useState, useRef } from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function EventsPage() {
     const [hoveredEvent, setHoveredEvent] = useState<number | null>(null);
