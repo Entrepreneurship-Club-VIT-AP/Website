@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+
 @theme inline {
   --font-league: var(--font-league-spartan), sans-serif;
   --breakpoint-xs: 400px;
