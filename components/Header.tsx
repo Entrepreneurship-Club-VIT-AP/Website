@@ -43,6 +43,7 @@ export default function Header() {
                     { name: "Teams", href: "/team" },
                     { name: "Events", href: "/events" },
                     { name: "Initiatives", href: "/initiatives" },
+                    { name: "Blogs", href: "/blogs" },
                     { name: "Contact", href: "/contact" }].map((item) => (
                         <motion.div
                             key={item.name}
@@ -90,6 +91,7 @@ export default function Header() {
                     { name: "Teams", href: "/team" },
                     { name: "Events", href: "/events" },
                     { name: "Initiatives", href: "/initiatives" },
+                    { name: "Blogs", href: "/blogs" },
                     { name: "Contact", href: "/contact" }].map((item) => (
                         <motion.div
                             key={item.name}
