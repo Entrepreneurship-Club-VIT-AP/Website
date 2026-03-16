@@ -14,8 +14,8 @@ const eslintConfig = [
   ...compat.config({
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
-    }
-  })
+    },
+  }),
 ];
 
 export default eslintConfig;

@@ -4,11 +4,13 @@ import "./globals.css";
 import WelcomeScreen from "@/components/WelcomeScreen";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AuthProvider from "@/components/auth/AuthProvider";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
   variable: "--font-league-spartan",
-})
+});
+
 export const metadata: Metadata = {
   title: "Entrepreneurship Club",
   description: "Empower, Execute, Excel.",
@@ -19,10 +21,12 @@ export const metadata: Metadata = {
     siteName: "Entrepreneurship Club",
   },
 };
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-}
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,14 +34,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${leagueSpartan.variable} antialiased px-3`}
-      >
-        <WelcomeScreen >
-          <Header />
-          {children}
-          <Footer />
-        </WelcomeScreen>
+      <body className={`${leagueSpartan.variable} antialiased min-h-screen`}>
+        <AuthProvider>
+          <WelcomeScreen>
+            <div className="min-h-screen flex flex-col">
+              <Header />
+              <div className="flex-1">{children}</div>
+              <Footer />
+            </div>
+          </WelcomeScreen>
+        </AuthProvider>
       </body>
     </html>
   );

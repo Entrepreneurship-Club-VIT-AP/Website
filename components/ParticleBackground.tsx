@@ -37,9 +37,9 @@ const ParticleBackground = () => {
             grab: {
               distance: 200,
               links: {
-                opacity: 0.8
-              }
-            }
+                opacity: 0.8,
+              },
+            },
           },
         },
         particles: {
@@ -51,7 +51,7 @@ const ParticleBackground = () => {
             distance: 180,
             enable: true,
             opacity: 0.5,
-            width: 2
+            width: 2,
           },
           move: {
             direction: "none",
@@ -61,7 +61,7 @@ const ParticleBackground = () => {
             },
             random: false,
             speed: 2,
-            straight: false
+            straight: false,
           },
           number: {
             density: {
