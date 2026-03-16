@@ -14,7 +14,7 @@
     "@tsparticles/react": "^3.0.0",
     "framer-motion": "^12.18.1",
     "google-auth-library": "^10.6.1",
-    "next": "15.3.4",
+    "next": "15.3.8",
     "next-auth": "^4.24.13",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
