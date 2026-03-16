@@ -13,6 +13,9 @@ export default function LoginPage() {
     [searchParams],
   );
 
+  const error = searchParams.get("error");
+  const errorMessage = error === "AccessDenied" ? "Please sign in using your college email address." : null;
+
   return (
     <main className="max-w-xl mx-auto px-4 py-20">
       <section className="border border-white/10 rounded-xl p-8 bg-black/30">
@@ -21,6 +24,12 @@ export default function LoginPage() {
           Continue with Google. College users from the allowed domain can
           register for events.
         </p>
+
+        {errorMessage && (
+          <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 text-red-500 rounded-lg">
+            {errorMessage}
+          </div>
+        )}
 
         <button
           type="button"
